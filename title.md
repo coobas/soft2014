@@ -1,3 +1,3 @@
 Validation of equilibrium tools on the COMPASS tokamak
 
-*SOFT 2014 abstract*
+_SOFT 2014 abstract_
