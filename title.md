@@ -1,1 +1,1 @@
-Double click to edit the title
+Validation of equilibrium tools on the COMPASS tokamak
