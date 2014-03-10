@@ -8,6 +8,7 @@
 4. Possible enhancements -- synthetic dianostics
    * MSE
    * LCFS position (e.g. probes)
+_Optional_
 4. _FREEBIE in inverse mode for COMPASS as a shape designer, scenario designer)_
 5. _VDE simulation compared to experiments_
 6. _METIS/FREEBIE comparison to experiments_
