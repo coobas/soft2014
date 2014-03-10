@@ -11,6 +11,6 @@
 
 _Optional_
 
-A. _FREEBIE in inverse mode for COMPASS as a shape designer, scenario designer)_
-B. _VDE simulation compared to experiments_
-C. _METIS/FREEBIE comparison to experiments_
+1. _FREEBIE in inverse mode for COMPASS as a shape designer, scenario designer)_
+2. _VDE simulation compared to experiments_
+3. _METIS/FREEBIE comparison to experiments_
