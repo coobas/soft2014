@@ -4,4 +4,4 @@ L.C. Appel, I. Lupelli (CCFE)
 
 J.-F. Artaud (CEA)
 
-B. Fugeras (U. Nice)
+B. Faugeras (U. Nice)
