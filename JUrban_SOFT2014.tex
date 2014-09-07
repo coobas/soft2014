@@ -1,0 +1,160 @@
+%%
+%% This is file `elsarticle-template-num.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% elsarticle.dtx  (with options: `numtemplate')
+%% 
+%% Copyright 2007, 2008 Elsevier Ltd.
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% -------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+
+%\documentclass[5p,12pt]{elsarticle}
+\documentclass[preprint,5p,times]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+\usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+%% \usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+\usepackage{lineno}
+
+
+\usepackage{multirow} %&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+\usepackage{hhline}% http://ctan.org/pkg/hhline
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyvrb}
+
+\usepackage{hyperref}
+
+\hyphenation{Fire-Signal}
+
+
+%\journal{Nuclear Physics B}
+\journal{Fusion Engineering and Design}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{Validation of equilibrium tools on the COMPASS tokamak}
+
+%% use optional labels to link authors explicitly to addresses:
+ \author[label1]{J.~Urban}
+ \author[label2]{L.C.~Appel}
+ \author[label3]{J.F.~Artaud} 
+ \author[label4]{B~Faugeras} 
+ \author[label1,label5]{J.~Havlicek}
+ \author[label1]{M.~Komm}
+ \author[label2]{I.~Lupelli} 
+ \author[label1,label5]{M.~Peterka} 
+ % \address[label1]{Institute of Plasma Physics AS CR, v.v.i., Association EURATOM / IPP.CR, Za~Slovankou 3, 182 00 Praha 8, Czech Republic}
+ \address[label1]{Institute of Plasma Physics AS CR, v.v.i., Za~Slovankou 3, 182 00 Praha 8, Czech Republic}
+ \address[label2]{CCFE}
+ \address[label3]{CEA}
+ \address[label4]{UNice}
+ \address[label5]{Department of Surface and Plasma Science, Faculty of Mathematics and Physics, Charles University in Prague, V Hole\v{s}ovi\v{c}k\'ach 2, 180~00 Praha 8, Czech Republic}
+
+\input{Abstract.tex}
+% \begin{abstract} %% Text of abstract 
+% Various MHD (magnetohydrodynamic) equilibrium tools, some of which being recently developed or considerably updated, are used on the medium-size COMPASS tokamak [R. Pánek et al., Czech J Phys 56, B125, 2006]. MHD equilibrium is a fundamental property of the tokamak plasma, whose knowledge is required for many diagnostics and modelling tools. Proper benchmarking and validation of equilibrium tools is thus key for interpreting and planning tokamak experiments. We present here benchmarks and comparisons to experimental data of the EFIT++ reconstruction code [L.C. Appel et al., to be submitted to Nucl. Fusion], the free-boundary equilibrium code FREEBIE  [J.-F. Artaud, S.H. Kim, EPS 2012, P4.023], and a rapid plasma boundary reconstruction code VacTH [B. Faugeras et al., PPCF 2014, accepted]. We demonstrate that FREEBIE can calculate the equilibrium and corresponding poloidal field (PF) coils currents for given plasma parameters. Both EFIT++ and VacTH can reconstruct equilibria generated by FREEBIE from synthetic diagnostic data (including an artificial noise) and hence might be suitable for real-time control. Optimum reconstruction parameters are estimated; in addition, possible enhancements using more diagnostics are discussed and simulated using synthetic diagnostics. FREEBIE can also calculate the temporal evolution of the poloidal field coils currents for a whole plasma scenario.
+% \end{abstract}
+
+ 
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+tokamak  \sep equilibrium \sep COMPASS 
+%% PACS codes here, in the form: \PACS code \sep code
+\PACS 52.55.Fa \sep 07.05.Kf \sep 07.05.Hd 
+% Tokamaks, spherical tokamaks; Data management; Data acquisition
+%\sep ???
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+% \begin{document}
+% \title{Validation of equilibrium tools on the COMPASS tokamak}
+
+
+
+% \appendix
+% \input{Appendix.tex}
+
+% \section*{References} % (fold)
+
+\bibliographystyle{model1-num-names}
+\bibliography{bibliography/biblio}{}
+
+% \bibliographystyle{unsrt}
+
+% \bibliographystyle{abbrvnat}
+
+% \usepackage{natbib}
+% \bibliographystyle{chicago}
+
+\end{document}
+\endinput
