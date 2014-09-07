@@ -3,5 +3,16 @@
 \section{Verification and validation procedure} % (fold)
 \label{sec:procedure}
 
+Reliable MHD equilibrium reconstruction is very important for tokamak exploitation. Numerous diagnostics and subsequent analyses require as inputs equilibrium properties such as flux surface geometry, magnetic field, stored energy, internal inductance etc. We have set up a set of benchmarking tasks, which verify and validate equilibrium tools that are currently employed on COMPASS. The procedure is fundamentally following:
+
+\begin{enumerate}
+	\item Equilibrium reconstruction of selected experimental cases using EFIT++.
+	\item Recalculate the equilibria using FREEBIE in inverse mode.
+	\item Optionally alter the equilibria in FREEBIE using e.g. experimental pressure profiles.
+	\item Reconstruct FREEBIE equilibria using EFIT++ and VacTH with various parameters and artificial input noise.
+\end{enumerate}
+
+The first step employs a routine EFIT++ set-up for COMPASS with heuristically tuned parameters. In addition to the total plasma current $I_\mathrm{p}$ and the currents in individual PF circuits, 16 partial Rogowski coils and 4 flux loops are employed in this reconstruction and $p'$ and $FF'$ are assumed to be linear functions of the poloidal flux $\psi$.
+FREEBIE inputs $I_\mathrm{p}$, $p'\left( {\bar \psi } \right)$ and $FF'\left( {\bar \psi } \right)$ profiles, the plasma boundary coordinates and an initial guess for the PF coils currents. Here, $p$ is the plasma pressure, $F = RB_\phi$ and $\bar\psi$ is the normalized poloidal magnetic flux ($\bar\psi = 0$ on the magnetic axis and $\bar\psi = 1$ on the plasma boundary). FREEBIE then seeks a solution to the Grad-Shafranov equation, including the PF coils currents, which minimizes the given plasma shape constraint. (This regime is called inverse mode.) FREEBIE can naturally output arbitrary synthetic diagnostics. We use here additional 24 poloidally and 24 radially oriented partial Rogowski coils (which are actually mounted on COMPASS) and an artificial set of 16 flux loops located at the same positions as the basic magnetic probes.
 
 % section procedure (end)
