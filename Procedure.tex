@@ -13,6 +13,24 @@ Reliable MHD equilibrium reconstruction is very important for tokamak exploitati
 \end{enumerate}
 
 The first step employs a routine EFIT++ set-up for COMPASS with heuristically tuned parameters. In addition to the total plasma current $I_\mathrm{p}$ and the currents in individual PF circuits, 16 partial Rogowski coils and 4 flux loops are employed in this reconstruction and $p'$ and $FF'$ are assumed to be linear functions of the poloidal flux $\psi$.
-FREEBIE inputs $I_\mathrm{p}$, $p'\left( {\bar \psi } \right)$ and $FF'\left( {\bar \psi } \right)$ profiles, the plasma boundary coordinates and an initial guess for the PF coils currents. Here, $p$ is the plasma pressure, $F = RB_\phi$ and $\bar\psi$ is the normalized poloidal magnetic flux ($\bar\psi = 0$ on the magnetic axis and $\bar\psi = 1$ on the plasma boundary). FREEBIE then seeks a solution to the Grad-Shafranov equation, including the PF coils currents, which minimizes the given plasma shape constraint. (This regime is called inverse mode.) FREEBIE can naturally output arbitrary synthetic diagnostics. We use here additional 24 poloidally and 24 radially oriented partial Rogowski coils (which are actually mounted on COMPASS) and an artificial set of 16 flux loops located at the same positions as the basic magnetic probes.
+In the second step, FREEBIE inputs $I_\mathrm{p}$, $p'\left( {\bar \psi } \right)$ and $FF'\left( {\bar \psi } \right)$ profiles, the plasma boundary coordinates and an initial guess for the PF coils currents. Here, $p$ is the plasma pressure, $F = RB_\phi$ and $\bar\psi$ is the normalized poloidal magnetic flux ($\bar\psi = 0$ on the magnetic axis and $\bar\psi = 1$ on the plasma boundary). $p'$ comes either from the EFIT++ reconstruction or from Thomson scattering pressure profile $p_\mathrm{TS} = 1.3 n_\mathrm{e} p_\mathrm{e}$. FREEBIE then seeks a solution to the Grad-Shafranov equation, including the PF coils currents, which minimizes the given plasma shape constraint. (This regime is called the inverse mode.) FREEBIE can naturally output arbitrary synthetic diagnostics. We use here additional 24 poloidally and 24 radially oriented partial Rogowski coils (which are actually mounted on COMPASS) and an artificial set of 16 flux loops located at the same positions as the basic magnetic probes.
+In the optional third step, an artificial random noise is added to the calculated values of $I_\mathrm{p}$, magnetic probes and flux loops. In particular, for a given noise level $l$, $\tilde X = \left( {1 + U\left( { - l,l} \right)^\mathrm{T}} \right)X$, where $X$ is a row vector of the synthetic diagnostics data and $U\left( { - l,l} \right)$ is a random vector of the same shape as $X$ with a uniform distribution on $\left( { - l,l} \right)$.
+
+The final fourth step consists of reconstructing the equilibria form synthetic FREEBIE data using EFIT++ and VacTH. The reconstructions are then compared to the original equilibrium, focusing on global parameters and geometry. VacTH does not provide a full equilibrium but the plasma shape only; The target of VacTH is to provide such reconstructions in real time for a feedback control. Scans are performed over noise levels and selected code parameters: $p'$ and $FF'$ polynomial degrees in EFIT++ and the number of harmonics ($n^{\mathrm e}$, $n^{\mathrm p}$) in VacTH. Following quantities are used for the comparison.
+\begin{table}[!h]
+    \begin{tabular}{ll}
+    $R_{\mathrm ax}$, $Z_{\mathrm ax}$ & $R,Z$ coordinates of the magnetic axis \\
+    $R_{\mathrm in}$, $R_{\mathrm out}$ & inner/outer $R$ coordinate of LCFS at $Z=Z_{\mathrm ax}$ \\
+    $Z_{\mathrm min}$, $Z_{\mathrm max}$ & minimum/maximum $Z$ coordinate of LCFS \\
+    $\kappa  = \frac{\left( {{Z_{{\rm{max}}}} - {Z_{{\rm{min}}}}} \right) } { \left( {{R_{{\rm{out}}}} - {R_{{\rm{in}}}}} \right) }$          & elongation   \\
+    ${l_{\rm{i}}} = {{\bar B_{\rm{p}}^2}} / {{B_{\rm{a}}^2}}$          & normalized internal inductance   \\
+    ${\beta _{\rm{p}}} = {{2{\mu _0}\bar p}} / {{B_{\rm{a}}^2}}$          & poloidal beta   \\
+    $ W = \int_0^V {3/2p{\rm{d}}V'}$ & stored plasma energy \\
+    $ q_0$, $q_{95}$ & safety factor at $\bar \psi = 0,\ 0.95$ \\
+    \end{tabular}
+\end{table}
+
+Here, $\bar x = \int_0^V {x/V{\rm{d}}V'} $ is a volume average, $V$ is the total plasma volume, $B_{\mathrm a} = \mu _0 I_\mathrm{p} / l_{\mathrm a}$, $l_{\mathrm a}$ is the poloidal LCFS perimeter.
+
 
 % section procedure (end)
