@@ -17,11 +17,11 @@ We have selected five time slices from COMPAS shots 4275 and 6962 (i.e. 10 cases
  EFIT++ &  1.02 &         0.0005 &           0.0002 &        0.002 &        0.002 &                  0.008 &       0.002 &       0.002 &          0.02 &            0.1 &              0.02 &           0.02 &           0.009 \\
  EFIT++ &  1.05 &          0.001 &           0.0008 &        4e-05 &       0.0003 &                  0.004 &       0.003 &       0.005 &          0.01 &           0.07 &              0.02 &           0.01 &           0.009 \\
  EFIT++ &   1.1 &          0.001 &           0.0005 &        0.005 &       0.0002 &                  0.005 &       0.004 &       0.002 &          0.04 &           0.09 &              0.03 &           0.02 &            0.05 \\
-  VacTH &  0.97 &              0 &            0.001 &       0.0006 &       0.0002 &                  0.002 &       8e-07 &       7e-05 &           nan &            nan &               nan &            nan &             nan \\
-  VacTH &  0.99 &          4e-05 &           0.0004 &        0.001 &       0.0008 &                  0.004 &       4e-07 &      0.0001 &           nan &            nan &               nan &            nan &             nan \\
-  VacTH &  1.02 &          0.002 &           0.0008 &        0.005 &        0.002 &                   0.01 &       2e-06 &       0.002 &           nan &            nan &               nan &            nan &             nan \\
-  VacTH &  1.05 &          0.006 &            0.002 &        5e-05 &        0.002 &                   0.01 &       3e-06 &        0.02 &           nan &            nan &               nan &            nan &             nan \\
-  VacTH &   1.1 &          0.005 &            0.002 &        0.002 &        0.003 &                   0.02 &       2e-06 &       0.003 &           nan &            nan &               nan &            nan &             nan \\
+  VacTH &  0.97 &              0 &            0.001 &       0.0006 &       0.0002 &                  0.002 &       8e-07 &       7e-05 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &  0.99 &          4e-05 &           0.0004 &        0.001 &       0.0008 &                  0.004 &       4e-07 &      0.0001 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &  1.02 &          0.002 &           0.0008 &        0.005 &        0.002 &                   0.01 &       2e-06 &       0.002 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &  1.05 &          0.006 &            0.002 &        5e-05 &        0.002 &                   0.01 &       3e-06 &        0.02 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &   1.1 &          0.005 &            0.002 &        0.002 &        0.003 &                   0.02 &       2e-06 &       0.003 &           -- &            -- &               -- &            -- &             -- \\
 \bottomrule
 \end{tabular}
 
@@ -40,7 +40,10 @@ We have selected five time slices from COMPAS shots 4275 and 6962 (i.e. 10 cases
 \end{figure*}
 
 
-The second shot for the comparison is 6962, which has been chosen because Thomson scattering (TS) profiles are available. On top of the same exercise as for 4275, we have calculated with FREEBIE equilibria with experimental TS pressure profiles. These equilibria of course no longer feature linear $p'$ and $FF'$ profiles. Results with smoothed TS profiles and an artificial noise in magnetic probes and flux loops with $\epsilon = 0.03$ are shown in Fig. \ref{fig:ex6962}.
+The second shot for the comparison is 6962, which has been chosen because Thomson scattering (TS) profiles are available. In Fig. \ref{fig:ex6962} we show reconstructions for more realistic equilibria and an artificial noise in the synthetic diagnostic signals. TS pressures were used in FREEBIE equilibria, which course no longer feature linear $p'$ and $FF'$ profiles. 
+It is apparent that the reconstruction is not as good as in the previous case. Nevertheless, the plasma shape is well reconstructed with EFIT++ and VacTH, except for the last time slice in which VacTH yields too large plasma in the upper part.
+$n_{\mathrm p} = n_{\mathrm q} = 4$ is used in this case as these values are minimum for reasonable VacTH results, while higher values are too sensitive to the input noise.
+Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably reconstruct kinetic plasma parameters, such as the stored energy or $q_0$. Rather unexpected is a relatively good agreement of $l_\mathrm{i}$. However, this agreement is compensated by a large error of $\beta_{\mathrm p}$ so that the quantity $\beta_{\mathrm p} + l_{\mathrm i}/2$ remain within a 10~\% error bar.
 
 \begin{figure*}
 \centering   %\begin{center}
@@ -48,9 +51,44 @@ The second shot for the comparison is 6962, which has been chosen because Thomso
 \includegraphics[width=18cm]{figures/example_6962_TS_noise.pdf}
 \hfill{}
 %\end{center}
-\caption{Contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data, shot 4275. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{p'} = n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_{\mathrm p} = n_{\mathrm q} = 5$.}
+\caption{Pressure profiles and contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data, shot 6962 with Thomson scattering pressure profiles. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{p'} = n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_{\mathrm p} = n_{\mathrm q} = 4$.}
 \label{fig:ex6962}
 \end{figure*}
 
+\begin{table*}
+\centering
+
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+   % code &  time &  $\Delta R_{\mathrm in}$ &  $\Delta R_{\mathrm out}$ &  $\Delta Z_{\mathrm min}$ &  $\Delta Z_{\mathrm max}$ &  $\delta \kappa$ &  $E_\mathrm{mp}$ &  $E_\mathrm{fl}$ &  $\delta W$ &  $\delta \left(\beta_{\mathrm p} + l_{\mathrm i}/2 \right)$  &  $\delta q_0$ &  $\delta q_{95}$ \\
+   code &  time &  $\Delta R_{\mathrm in}$ &  $\Delta R_{\mathrm out}$ &  $\Delta Z_{\mathrm min}$ &  $\Delta Z_{\mathrm max}$ &  $\delta \kappa$ &  $E_\mathrm{mp}$ &  $E_\mathrm{fl}$ &  $\delta W$ &  $\delta l_{\mathrm i}$ &  $\delta \beta_{\mathrm p}$ &  $\delta q_0$ &  $\delta q_{95}$ \\
+\midrule
+ EFIT++ &  980 &               0 &            0.005 &        0.001 &        8e-06 &                   0.01 &        0.01 &        0.01 &           0.4 &           0.03 &               0.4 &            0.2 &          0.0008 \\
+ EFIT++ & 1014 &           0.003 &            0.006 &         0.02 &         0.01 &                   0.06 &        0.03 &        0.03 &           0.3 &          0.008 &               0.3 &            0.2 &            0.08 \\
+ EFIT++ & 1080 &           0.007 &            0.002 &        0.005 &        0.002 &                   0.04 &        0.03 &        0.03 &           0.3 &           0.01 &               0.3 &            0.2 &            0.02 \\
+ EFIT++ & 1147 &           0.008 &            0.008 &         0.01 &        0.006 &                   0.06 &        0.03 &        0.02 &           0.3 &           0.06 &               0.3 &            0.3 &            0.05 \\
+ EFIT++ & 1214 &          0.0002 &            0.008 &        0.002 &        0.001 &                   0.02 &        0.02 &        0.01 &          0.04 &            0.2 &              0.06 &            0.1 &            0.01 \\
+  VacTH &  980 &               0 &             0.01 &         0.01 &        0.007 &                   0.02 &      0.0001 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH & 1014 &           0.006 &           0.0002 &         0.01 &        0.007 &                   0.03 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH & 1080 &           0.009 &           0.0007 &        0.003 &       0.0007 &                   0.02 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH & 1147 &            0.02 &            0.007 &       0.0009 &        0.002 &                   0.01 &       5e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH & 1214 &            0.03 &            0.009 &         0.02 &         0.03 &                   0.02 &      0.0002 &        0.02 &           -- &            -- &               -- &            -- &             -- \\
+
+ % EFIT++ & 1e+03 &               0 &            0.005 &        0.001 &        8e-06 &                   0.01 &        0.01 &        0.01 &           0.4 &           0.03 &               0.4 &            0.2 &          0.0008 \\
+ % EFIT++ & 1e+03 &           0.003 &            0.006 &         0.02 &         0.01 &                   0.06 &        0.03 &        0.03 &           0.3 &          0.008 &               0.3 &            0.2 &            0.08 \\
+ % EFIT++ & 1e+03 &           0.007 &            0.002 &        0.005 &        0.002 &                   0.04 &        0.03 &        0.03 &           0.3 &           0.01 &               0.3 &            0.2 &            0.02 \\
+ % EFIT++ & 1e+03 &           0.008 &            0.008 &         0.01 &        0.006 &                   0.06 &        0.03 &        0.02 &           0.3 &           0.06 &               0.3 &            0.3 &            0.05 \\
+ % EFIT++ & 1e+03 &          0.0002 &            0.008 &        0.002 &        0.001 &                   0.02 &        0.02 &        0.01 &          0.04 &            0.2 &              0.06 &            0.1 &            0.01 \\
+ %  VacTH & 1e+03 &               0 &             0.01 &         0.01 &        0.007 &                   0.02 &      0.0001 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+ %  VacTH & 1e+03 &           0.006 &           0.0002 &         0.01 &        0.007 &                   0.03 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+ %  VacTH & 1e+03 &           0.009 &           0.0007 &        0.003 &       0.0007 &                   0.02 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+ %  VacTH & 1e+03 &            0.02 &            0.007 &       0.0009 &        0.002 &                   0.01 &       5e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+ %  VacTH & 1e+03 &            0.03 &            0.009 &         0.02 &         0.03 &                   0.02 &      0.0002 &        0.02 &           -- &            -- &               -- &            -- &             -- \\
+
+\bottomrule
+\end{tabular}
+\caption{Errors for the same cases as in Fig. \ref{fig:ex6962}.}
+\label{table:ex6962}
+\end{table*}
 
 % section results (end)
