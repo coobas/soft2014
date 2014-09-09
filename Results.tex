@@ -35,7 +35,7 @@ We have selected five time slices from COMPAS shots 4275 and 6962 (i.e. 10 cases
 \includegraphics[width=18cm]{figures/example_4275.pdf}
 \hfill{}
 %\end{center}
-\caption{Contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data, shot 4275. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{p'} = n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_{\mathrm p} = n_{\mathrm q} = 5$.}
+\caption{Contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data, shot 4275. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{p'} = n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_P = n_Q = 5$.}
 \label{fig:ex4275}
 \end{figure*}
 
@@ -43,7 +43,7 @@ We have selected five time slices from COMPAS shots 4275 and 6962 (i.e. 10 cases
 The second shot for the comparison is 6962, which has been chosen because Thomson scattering (TS) profiles are available. In Fig. \ref{fig:ex6962} we show reconstructions for more realistic equilibria and an artificial noise in the synthetic diagnostic signals. TS pressures were used in FREEBIE equilibria, which course no longer feature linear $p'$ and $FF'$ profiles. 
 It is apparent that the reconstruction is not as good as in the previous case. Nevertheless, the plasma shape is well reconstructed with EFIT++ and VacTH, except for the last time slice in which VacTH yields too large plasma in the upper part.
 $n_{\mathrm p} = n_{\mathrm q} = 4$ is used in this case as these values are minimum for reasonable VacTH results, while higher values are too sensitive to the input noise.
-Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably reconstruct kinetic plasma parameters, such as the stored energy or $q_0$. Rather unexpected is a relatively good agreement of $l_\mathrm{i}$. However, this agreement is compensated by a large error of $\beta_{\mathrm p}$ so that the quantity $\beta_{\mathrm p} + l_{\mathrm i}/2$ remain within a 10~\% error bar.
+Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably reconstruct kinetic plasma parameters, such as the stored energy or $q_0$. Rather unexpected is a relatively good agreement of $l_\mathrm{i}$. However, this agreement is compensated by a large error of $\beta_{\mathrm p}$ so that the quantity $\beta_{\mathrm p} + l_{\mathrm i}/2$ remain within a 10~\% error bar. Notable are large errors (up to 40~\%) in the stored energy, even for the circular plasma, which are mainly caused by incompatible pressure profiles.
 
 \begin{figure*}
 \centering   %\begin{center}
@@ -51,7 +51,7 @@ Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably recons
 \includegraphics[width=18cm]{figures/example_6962_TS_noise.pdf}
 \hfill{}
 %\end{center}
-\caption{Pressure profiles and contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data, shot 6962 with Thomson scattering pressure profiles. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{p'} = n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_{\mathrm p} = n_{\mathrm q} = 4$.}
+\caption{Pressure profiles and contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data, shot 6962 with Thomson scattering pressure profiles. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{p'} = n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_P = n_Q = 4$.}
 \label{fig:ex6962}
 \end{figure*}
 
@@ -90,5 +90,27 @@ Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably recons
 \caption{Errors for the same cases as in Fig. \ref{fig:ex6962}.}
 \label{table:ex6962}
 \end{table*}
+
+
+\begin{figure*}
+\centering   %\begin{center}
+\hfill{}
+\includegraphics[width=18cm]{figures/RZstats.pdf}
+\hfill{}
+%\end{center}
+\caption{First row: EFIT++, second row: VacTH. Red: linear $p'$ and $FF'$ profiles, blue: TS pressure profiles, violet: $n_{p'}=2$ or $n_{FF'}=2$, TS profiles. Zero noise data are scattered for a better visibility.}
+\label{fig:RZstats}
+\end{figure*}
+
+\begin{figure*}
+\centering   %\begin{center}
+\hfill{}
+\includegraphics[width=18cm]{figures/kinetic_stats.pdf}
+\hfill{}
+%\end{center}
+\caption{First row: $n_{p'}=n_{FF'}=1$, second row: either $n_{p'}=2$ or $n_{FF'}=2$. Red: linear $p'$ and $FF'$ profiles, blue: TS pressure profiles. Zero noise data are scattered for a better visibility.}
+\label{fig:kinetic_stats}
+\end{figure*}
+
 
 % section results (end)
