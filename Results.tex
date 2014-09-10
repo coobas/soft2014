@@ -46,8 +46,8 @@ A comparison of plasma shapes for shot 4275 is shown in Fig. \ref{fig:ex4275}. N
 
 The second shot for the comparison is 6962, which has been chosen because Thomson scattering (TS) profiles are available. In Fig. \ref{fig:ex6962} we show reconstructions for more realistic equilibria and an artificial noise in the synthetic diagnostic signals. TS pressures were used in FREEBIE equilibria, which course no longer feature linear $p'$ and $FF'$ profiles. 
 It is apparent that the reconstruction is not as good as in the previous case. Nevertheless, the plasma shape is well reconstructed with EFIT++ and VacTH, except for the last time slice in which VacTH yields too large plasma in the upper part.
-$n_{\mathrm p} = n_{\mathrm q} = 4$ is used in this case as these values are minimum for reasonable VacTH results, while higher values are too sensitive to the input noise.
-Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably reconstruct kinetic plasma parameters, such as the stored energy or $q_0$. Rather unexpected is a relatively good agreement of $l_\mathrm{i}$. However, this agreement is compensated by a large error of $\beta_{\mathrm p}$ so that the quantity $\beta_{\mathrm p} + l_{\mathrm i}/2$ remain within a 10~\% error bar. Notable are large errors (up to 40~\%) in the stored energy, even for the circular plasma, which are mainly caused by incompatible pressure profiles.
+$n_P = n_Q = 4$ is used in this case as these values are minimum for reasonable VacTH results, while higher values are too sensitive to the input noise.
+Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably reconstruct kinetic plasma parameters, such as the stored energy or $q_0$. Rather unexpected is a relatively good agreement of $l_\mathrm{i}$. However, this agreement is compensated by a large error of $\beta_{\mathrm p}$ so that the quantity $\beta_{\mathrm p} + l_{\mathrm i}/2$ remain within a 10~\% error bar. Notable are large errors (up to 40~\%) in the stored energy, which are mainly caused by incompatible pressure profiles.
 
 \begin{figure*}
 \centering   %\begin{center}
@@ -109,10 +109,10 @@ Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably recons
 \begin{figure*}
 \centering   %\begin{center}
 \hfill{}
-\includegraphics[width=18cm]{figures/kinetic_stats.pdf}
+\includegraphics[width=18cm]{figures/kinetic_stats_opt.pdf}
 \hfill{}
 %\end{center}
-\caption{First row: $n_{p'}=n_{FF'}=1$, second row: either $n_{p'}=2$ or $n_{FF'}=2$. Red: linear $p'$ and $FF'$ profiles, blue: TS pressure profiles. Zero input error data are scattered for a better visibility.}
+\caption{Internal plasma parameters relative errors for EFIT++ reconstructions using $n_{p'}=n_{FF'}=1$ in the top row and more optimized $n_{p'}$ in the bottom row. Zero input error data are scattered for a better visibility.}
 \label{fig:kinetic_stats}
 \end{figure*}
 
@@ -126,13 +126,24 @@ Absolute errors of the reconstructed LCFS extents for convergent cases from the 
 
 VacTH is performing reasonably well for its most favourable diagnostic set of 8 magnetic probes and 16 flux loops and $n_P = n_Q = 4$. With a higher number of harmonics or with less flux loops, VacTH becomes unreliable and yields significant errors. Unfortunately, only 4 flux loops are currently available on COMPASS. In fact, it is easier for VacTH to fit magnetic probes than flux loops while magnetic probes do not fully determine the magnetic flux. This is also apparent in $E_\mathrm{mp}$ and $E_\mathrm{fl}$ values in Tables \ref{table:ex4275} and \ref{table:ex6962}. An additional optimization of the fitting weights or algorithm is probably needed. This can be demonstrated by an exercise reconstruction with 64 magnetic probes and 16 flux loops, whose result is significantly worse than with only 8 magnetic probes and 16 flux loops.
 
-EFIT++ internal plasma parameters reconstruction results are shown in Fig. \ref{fig:kinetic_stats}. 
+EFIT++ internal plasma parameters reconstruction results are shown in Fig. \ref{fig:kinetic_stats}. It shows that purely magnetic reconstruction with $n_{p'}=n_{FF'}=1$ introduces (except for $I_{\rm{p}}$) a systematic error for realistic pressure profiles, i.e. for plasmas that do not have the same profile parametrization. 
+It is known that magnetic reconstruction with EFIT is difficult for limited plasmas (without additional constraints, particularly the store energy) \cite{efit1985}.
+This suggests that using $n_{p'}=1$ for limited plasmas and $n_{p'}=2$ for diverted plasmas might lead to better results. This is demonstrated in the bottom row of Fig. \ref{fig:kinetic_stats}.
+These optimized reconstructions do not suffer from the systematic error; however, they generally increase the error bars for target equilibria with linear $p'$ and $FF'$, especially for $q_0$. It is also notable that $\delta l_{\rm{i}} \cong 0.1$ for all $n_{p'}=n_{FF'}=1$ reconstructions.
 
+\begin{figure}
+\centering   %\begin{center}
+\hfill{}
+\includegraphics[width=8cm]{figures/convergence_ratio_6962.pdf}
+\hfill{}
+%\end{center}
+\caption{Ratio of converged cases to all cases, shot 6962, TS profiles. Opt refers to optimized code parameters.}
+\label{fig:convergence_ratio}
+\end{figure}
 
-Failure rates ...
+Another important property is the converged cases ratio, shown in Fig. \ref{fig:convergence_ratio}. EFIT++ converges in almost all cases with any of the tested configurations and in 100~\% cases in the optimized configuration. $n_P = n_Q = 4$ must be used in VacTH unless the number of non-converged cases is too large.
 
 % subsection statistical_analysis (end)
-
 
 
 % section results (end)
