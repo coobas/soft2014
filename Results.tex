@@ -11,10 +11,10 @@ A comparison of plasma shapes for shot 4275 is shown in Fig. \ref{fig:ex4275}. N
 
 \begin{table*}
 \centering
-
+\small
 \begin{tabular}{lrrrrrrrrrrrrr}
 \toprule
-   code &  time &  $\Delta R_{\mathrm in}$ &  $\Delta R_{\mathrm out}$ &  $\Delta Z_{\mathrm min}$ &  $\Delta Z_{\mathrm max}$ &  $\delta \kappa$ &  $E_\mathrm{mp}$ &  $E_\mathrm{fl}$ &  $\delta W$ &  $\delta l_{\mathrm i}$ &  $\delta \beta_{\mathrm p}$ &  $\delta q_0$ &  $\delta q_{95}$ \\
+   code &  time &  $\left| \Delta R_{\mathrm in} \right|$ &  $\left| \Delta R_{\mathrm out} \right|$ &  $\left| \Delta Z_{\mathrm min} \right|$ &  $\left| \Delta Z_{\mathrm max} \right|$ &  $\delta \kappa$ &  $E_\mathrm{mp}$ &  $E_\mathrm{fl}$ &  $\delta W$ &  $\delta l_{\mathrm i}$ &  $\delta \beta_{\mathrm p}$ &  $\delta q_0$ &  $\delta q_{95}$ \\
 \midrule
  EFIT++ &  0.97 &              0 &            0.002 &        0.001 &        0.001 &                  0.003 &       0.001 &      0.0009 &          0.04 &           0.09 &              0.03 &           0.03 &           0.007 \\
  EFIT++ &  0.99 &          4e-05 &            9e-05 &        0.001 &        0.001 &                  0.004 &       0.001 &      0.0006 &          0.04 &           0.09 &              0.04 &           0.02 &           0.005 \\
@@ -55,40 +55,28 @@ Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably recons
 \includegraphics[width=18cm]{figures/example_6962_TS_noise.pdf}
 \hfill{}
 %\end{center}
-\caption{Pressure profiles and contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data, shot 6962 with Thomson scattering pressure profiles. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{p'} = n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_P = n_Q = 4$.}
+\caption{Pressure profiles and contours of $\bar\psi=\left(0.25,0.5,0.75,1\right)$, reconstruction from FREEBIE data with 3~\% random noise, shot 6962 with Thomson scattering pressure profiles. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_P = n_Q = 4$.}
 \label{fig:ex6962}
 \end{figure*}
 
 \begin{table*}
 \centering
-
+\small
 \begin{tabular}{lrrrrrrrrrrrrr}
 \toprule
    % code &  time &  $\Delta R_{\mathrm in}$ &  $\Delta R_{\mathrm out}$ &  $\Delta Z_{\mathrm min}$ &  $\Delta Z_{\mathrm max}$ &  $\delta \kappa$ &  $E_\mathrm{mp}$ &  $E_\mathrm{fl}$ &  $\delta W$ &  $\delta \left(\beta_{\mathrm p} + l_{\mathrm i}/2 \right)$  &  $\delta q_0$ &  $\delta q_{95}$ \\
-   code &  time &  $\Delta R_{\mathrm in}$ &  $\Delta R_{\mathrm out}$ &  $\Delta Z_{\mathrm min}$ &  $\Delta Z_{\mathrm max}$ &  $\delta \kappa$ &  $E_\mathrm{mp}$ &  $E_\mathrm{fl}$ &  $\delta W$ &  $\delta l_{\mathrm i}$ &  $\delta \beta_{\mathrm p}$ &  $\delta q_0$ &  $\delta q_{95}$ \\
+   code &  time &  $\left| \Delta R_{\mathrm in} \right|$ &  $\left| \Delta R_{\mathrm out} \right|$ &  $\left| \Delta Z_{\mathrm min} \right|$ &  $\left| \Delta Z_{\mathrm max} \right|$ &  $\delta \kappa$ &  $E_\mathrm{mp}$ &  $E_\mathrm{fl}$ &  $\delta W$ &  $\delta l_{\mathrm i}$ &  $\delta \beta_{\mathrm p}$ &  $\delta q_0$ &  $\delta q_{95}$ \\
 \midrule
- EFIT++ &  980 &               0 &            0.005 &        0.001 &        8e-06 &                   0.01 &        0.01 &        0.01 &           0.4 &           0.03 &               0.4 &            0.2 &          0.0008 \\
- EFIT++ & 1014 &           0.003 &            0.006 &         0.02 &         0.01 &                   0.06 &        0.03 &        0.03 &           0.3 &          0.008 &               0.3 &            0.2 &            0.08 \\
- EFIT++ & 1080 &           0.007 &            0.002 &        0.005 &        0.002 &                   0.04 &        0.03 &        0.03 &           0.3 &           0.01 &               0.3 &            0.2 &            0.02 \\
- EFIT++ & 1147 &           0.008 &            0.008 &         0.01 &        0.006 &                   0.06 &        0.03 &        0.02 &           0.3 &           0.06 &               0.3 &            0.3 &            0.05 \\
- EFIT++ & 1214 &          0.0002 &            0.008 &        0.002 &        0.001 &                   0.02 &        0.02 &        0.01 &          0.04 &            0.2 &              0.06 &            0.1 &            0.01 \\
-  VacTH &  980 &               0 &             0.01 &         0.01 &        0.007 &                   0.02 &      0.0001 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
-  VacTH & 1014 &           0.006 &           0.0002 &         0.01 &        0.007 &                   0.03 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
-  VacTH & 1080 &           0.009 &           0.0007 &        0.003 &       0.0007 &                   0.02 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
-  VacTH & 1147 &            0.02 &            0.007 &       0.0009 &        0.002 &                   0.01 &       5e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
-  VacTH & 1214 &            0.03 &            0.009 &         0.02 &         0.03 &                   0.02 &      0.0002 &        0.02 &           -- &            -- &               -- &            -- &             -- \\
-
- % EFIT++ & 1e+03 &               0 &            0.005 &        0.001 &        8e-06 &                   0.01 &        0.01 &        0.01 &           0.4 &           0.03 &               0.4 &            0.2 &          0.0008 \\
- % EFIT++ & 1e+03 &           0.003 &            0.006 &         0.02 &         0.01 &                   0.06 &        0.03 &        0.03 &           0.3 &          0.008 &               0.3 &            0.2 &            0.08 \\
- % EFIT++ & 1e+03 &           0.007 &            0.002 &        0.005 &        0.002 &                   0.04 &        0.03 &        0.03 &           0.3 &           0.01 &               0.3 &            0.2 &            0.02 \\
- % EFIT++ & 1e+03 &           0.008 &            0.008 &         0.01 &        0.006 &                   0.06 &        0.03 &        0.02 &           0.3 &           0.06 &               0.3 &            0.3 &            0.05 \\
- % EFIT++ & 1e+03 &          0.0002 &            0.008 &        0.002 &        0.001 &                   0.02 &        0.02 &        0.01 &          0.04 &            0.2 &              0.06 &            0.1 &            0.01 \\
- %  VacTH & 1e+03 &               0 &             0.01 &         0.01 &        0.007 &                   0.02 &      0.0001 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
- %  VacTH & 1e+03 &           0.006 &           0.0002 &         0.01 &        0.007 &                   0.03 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
- %  VacTH & 1e+03 &           0.009 &           0.0007 &        0.003 &       0.0007 &                   0.02 &       3e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
- %  VacTH & 1e+03 &            0.02 &            0.007 &       0.0009 &        0.002 &                   0.01 &       5e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
- %  VacTH & 1e+03 &            0.03 &            0.009 &         0.02 &         0.03 &                   0.02 &      0.0002 &        0.02 &           -- &            -- &               -- &            -- &             -- \\
-
+ EFIT++ &    980 &               0 &            0.009 &       -0.003 &        0.003 &                   0.01 &        0.04 &        0.01 &           0.1 &            0.3 &               0.1 &            0.5 &            0.02 \\
+ EFIT++ &   1014 &          0.0004 &          -0.0005 &       -0.001 &        0.001 &                  0.002 &        0.01 &        0.01 &         0.006 &            0.1 &             0.003 &           0.07 &           0.003 \\
+ EFIT++ &   1080 &          -0.002 &           -0.002 &       -0.002 &        0.002 &                  0.003 &        0.01 &        0.02 &           0.2 &            0.1 &               0.2 &           0.06 &            0.02 \\
+ EFIT++ &   1147 &          -0.002 &          -0.0006 &       -0.007 &       -0.002 &                  0.006 &        0.01 &        0.02 &           0.1 &            0.2 &               0.1 &            0.2 &            0.01 \\
+ EFIT++ &   1214 &          -0.004 &            0.007 &        0.006 &       -0.004 &                   0.04 &        0.03 &        0.01 &           0.2 &            0.3 &               0.2 &           0.03 &           0.001 \\
+  VacTH &    980 &               0 &            -0.01 &         0.01 &        -0.02 &                   0.04 &      0.0002 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &   1014 &           0.006 &           -0.003 &        -0.01 &       -0.001 &                   0.02 &       7e-05 &        0.02 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &   1080 &            0.01 &           -0.003 &        0.004 &       -0.003 &                   0.01 &       3e-05 &       0.009 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &   1147 &            0.02 &           -0.003 &       -0.002 &        0.002 &                   0.04 &       5e-05 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
+  VacTH &   1214 &            0.01 &            0.001 &        -0.02 &         0.02 &                   0.07 &      0.0001 &        0.01 &           -- &            -- &               -- &            -- &             -- \\
 \bottomrule
 \end{tabular}
 \caption{Errors for the same cases as in Fig. \ref{fig:ex6962}.}
@@ -102,7 +90,7 @@ Expectedly, EFIT++ reconstruction with magnetic data only cannot reliably recons
 \includegraphics[width=18cm]{figures/RZstats.pdf}
 \hfill{}
 %\end{center}
-\caption{Absolute errors in LCFS extents for convergent cases. EFIT++ results in the first row, VacTH in the second row. Selection 1 means linear $p'$ and $FF'$ in EFIT++ as well as FREEBIE, selection 2 means TS pressure profiles in FREEBIE and $n_{p'} = n_{FF'} = 1$ in EFIT++, selection 3 means TS pressure profiles in FREEBIE and $n_{p'} = 2$ in EFIT++. Input error is calculated as an average of $I_{\rm{p}}$, magnetic probes and flux loops values. Zero input error data are scattered for a better visibility.}
+\caption{Absolute errors in LCFS extents for convergent cases. EFIT++ results in the first row, VacTH in the second row. S1 denotes linear $p'$ and $FF'$ in EFIT++ as well as FREEBIE, s2 denotes TS pressure profiles in FREEBIE and $n_{p'} = n_{FF'} = 1$ in EFIT++, s3 denotes TS pressure profiles in FREEBIE and $n_{p'} = 2$ in EFIT++. Full lines show the means. VacTH parameters are $n_P=n_Q=4$, ``8 mp, 16 fl'' denotes $n_\mathrm{mp}=8$, $n_\mathrm{fl}=16$. Input error is calculated as an average of $I_{\rm{p}}$, magnetic probes and flux loops values. Zero input error data are scattered for a better visibility.}
 \label{fig:RZstats}
 \end{figure*}
 
@@ -129,7 +117,7 @@ VacTH is performing reasonably well for its most favourable diagnostic set of 8 
 EFIT++ internal plasma parameters reconstruction results are shown in Fig. \ref{fig:kinetic_stats}. It shows that purely magnetic reconstruction with $n_{p'}=n_{FF'}=1$ introduces (except for $I_{\rm{p}}$) a systematic error for realistic pressure profiles, i.e. for plasmas that do not have the same profile parametrization. 
 It is known that magnetic reconstruction with EFIT is difficult for limited plasmas (without additional constraints, particularly the store energy) \cite{efit1985}.
 This suggests that using $n_{p'}=1$ for limited plasmas and $n_{p'}=2$ for diverted plasmas might lead to better results. This is demonstrated in the bottom row of Fig. \ref{fig:kinetic_stats}.
-These optimized reconstructions do not suffer from the systematic error; however, they generally increase the error bars for target equilibria with linear $p'$ and $FF'$, especially for $q_0$. It is also notable that $\delta l_{\rm{i}} \cong 0.1$ for all $n_{p'}=n_{FF'}=1$ reconstructions.
+Reconstructions with such optimized parameters do not suffer from the systematic error; however, they generally increase the error bars for target equilibria with linear $p'$ and $FF'$, especially for $q_0$. It is also notable that $\delta l_{\rm{i}} \cong 0.1$ for all $n_{p'}=n_{FF'}=1$ reconstructions.
 
 \begin{figure}
 \centering   %\begin{center}
@@ -141,7 +129,8 @@ These optimized reconstructions do not suffer from the systematic error; however
 \label{fig:convergence_ratio}
 \end{figure}
 
-Another important property is the converged cases ratio, shown in Fig. \ref{fig:convergence_ratio}. EFIT++ converges in almost all cases with any of the tested configurations and in 100~\% cases in the optimized configuration. $n_P = n_Q = 4$ must be used in VacTH unless the number of non-converged cases is too large.
+Another important property is the converged cases ratio, shown in Fig. \ref{fig:convergence_ratio}. EFIT++ converges in almost all cases with any of the tested configurations and in 100~\% cases in the optimized configuration (i.e. with $n_{p'}=2$ for diverted plasmas). $n_P = n_Q = 4$ must be used in VacTH unless the number of non-converged cases is too large. 
+Quite interestingly, optimized VacTH convergence rate drops significantly around 2~\% input noise.
 
 % subsection statistical_analysis (end)
 
