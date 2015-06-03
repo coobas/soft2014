@@ -1,0 +1,48 @@
+Reviewers' comments:
+
+Dear author, first of all let us apologise for the long delay. We had significant difficulties in finding referees which were ready to accept our requests for reviews.
+In the particular case of your paper, after having invited several referees we could only get one report. The report includes enough analysis and detail so that we can trust it and after reading the paper myself I have taken the decision to go ahead with a single referee.
+
+Best regards
+Joaquin Sanchez
+Guest editor
+
+
+
+Reviewer #2: The manuscript is well organized and written in general. I found some misprints and other small inconsistencies to check for the final version. I have also some comments.
+Misprints.
+1. Introduction. 
+now: … which predicts PF coils currents from a give plasma boundary and profiles.
+to be: … which predicts PF coils currents from a given plasma boundary and profiles.
+3.2 Statistical analysis
+now: For shot 6962, equilibria with TS pressure profiles and with linear p' and FF'.
+to be: For shot 6962, equilibria with TS pressure profiles and with linear p' and FF' is used.
+3.2 Statistical analysis
+now: We can observer that the…
+to be: We can observe that the…
+
+Inconsistencies.
+
+2. Verification and validation procedure.
+When defining verification and validation procedure you specify 4 steps. Then you expain them, but in explanation you change order:
+Procedure definition:
+4. Reconstruct FREEBIE equilibria using EFIT++ and VacTH with various parameters and artificial input noise.
+Later in text:
+In the optional third step, an artificial random noise is added to the calculated values of Ip, magnetic probes and flux loops.
+
+3. Results.
+You introduce different shapes as circular elongated and diverted. Then in 3.1 you are using term 'eliptical' several times, that can refer to both elongated and diverted plasmas. Could you specify which plasmas you refer to in each case.
+
+
+Comments.
+
+1. When talking about ITM CPOs, I think you need reference to explain what is it. It could be for example:
+G. Manduchi et al, Fusion Eng. Design 83 (2008) 462
+
+2. Annotation to Fig.2. Last sentence is not clear for me, what do you mean? Have you artificially scattered zero error data? Could you explain this?
+
+3. Fig.2. I propose to change color for case s3 from purple to (for example) green to distinguish results (it is hard to do now).
+
+4. Conclusions. When you are saying that VacTH is a promising tool for a real-feedback control, on what reasoning are you relying? In the text it is shown that VacTH is able to reconstruct plasma surface with 'reasonable' accuracy. I think in order to conclude about it's applicability for real-time control it should be verified against another real-time tools. My conclusion from the results shown is that further improvements in the code are needed to make it more robust (that is required for real-time feedback control).
+
+

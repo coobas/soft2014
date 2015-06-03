@@ -6,7 +6,7 @@
 \begin{figure*}[!htb]
 \centering   %\begin{center}
 \hfill{}
-\includegraphics[width=18cm]{example_6962.pdf}
+\includegraphics[width=17.5cm]{example_6962.pdf}
 \hfill{}
 %\end{center}
 \caption{EFIT++ reconstructed pressure profiles and contours of $\bar\psi=\left(0.5,1\right)$ and VacTH LCFS from FREEBIE data, shot 6962 with Thomson scattering pressure profiles. EFIT++ parameters: $n_\mathrm{mp} = 16$, $n_\mathrm{fl} = 4$, $n_{FF'} = 1$. VacTH parameters: $n_\mathrm{mp} = 8$, $n_\mathrm{fl} = 16$, $n_P = n_Q = 4$. 3~\% random input data noise is used in the case of VacTH and EFIT++ with $n_{p'} = 2$, zero noise otherwise.}
@@ -14,7 +14,7 @@
 \end{figure*}
 
 
-We have selected five time slices from COMPAS shots 4275 and 6962 (i.e. 10 cases in total) for the analysis. These cases include circular, elongated and diverted plasmas with different currents. 
+We have selected five time slices from COMPAS shots 4275 and 6962 (i.e. 10 cases in total) for the analysis. These cases include circular, elliptical (limited) and diverted plasmas with different currents. 
 
 \subsection{Example cases}
 
@@ -25,17 +25,19 @@ VacTH reconstructs the LCFS reasonably, even with noisy inputs. Although a bendi
 \begin{figure*}[!htb]
 \centering   %\begin{center}
 \hfill{}
-\includegraphics[width=18cm]{RZstats.pdf}
+\includegraphics[width=17.5cm]{RZstats.pdf}
 \hfill{}
 %\end{center}
-\caption{Absolute errors in LCFS extents for convergent cases. EFIT++ results in the first row, VacTH in the second row. S1 denotes linear $p'$ and $FF'$ in EFIT++ as well as FREEBIE, s2 denotes TS pressure profiles in FREEBIE and $n_{p'} = n_{FF'} = 1$ in EFIT++, s3 denotes TS pressure profiles in FREEBIE and $n_{p'} = 2$ in EFIT++. Full lines show the means. VacTH parameters are $n_P=n_Q=4$, ``8 mp, 16 fl'' denotes $n_\mathrm{mp}=8$, $n_\mathrm{fl}=16$. Input error is calculated as an average of $I_{\rm{p}}$, magnetic probes and flux loops values. Zero input error data are scattered for a better visibility.}
+\caption{Absolute errors in LCFS extents for convergent cases. EFIT++ results in the first row, VacTH in the second row. S1 denotes linear $p'$ and $FF'$ in EFIT++ as well as FREEBIE, s2 denotes TS pressure profiles in FREEBIE and $n_{p'} = n_{FF'} = 1$ in EFIT++, s3 denotes TS pressure profiles in FREEBIE and $n_{p'} = 2$ in EFIT++. Full lines show the means. VacTH parameters are $n_P=n_Q=4$, ``8 mp, 16 fl'' denotes $n_\mathrm{mp}=8$, $n_\mathrm{fl}=16$. Input error is calculated as an average of $I_{\rm{p}}$, magnetic probes and flux loops values. 
+% Zero input error data are scattered for a better visibility.
+}
 \label{fig:RZstats}
 \end{figure*}
 
 \begin{figure*}[!htb]
 \centering   %\begin{center}
 \hfill{}
-\includegraphics[width=18cm]{kinetic_stats_opt.pdf}
+\includegraphics[width=17.5cm]{kinetic_stats_opt.pdf}
 \hfill{}
 %\end{center}
 \caption{Internal plasma parameters relative errors for EFIT++ reconstructions using $n_{p'}=n_{FF'}=1$ in the top row and more optimized $n_{p'}$ in the bottom row. Zero input error data are scattered for a better visibility.}
@@ -46,16 +48,16 @@ VacTH reconstructs the LCFS reasonably, even with noisy inputs. Although a bendi
 \subsection{Statistical analysis} % (fold)
 \label{sub:statistical_analysis}
 
-In order to get a global overview of EFIT++ and VacTH reconstruction properties on COMPASS, we perform a scan over major code parameters and signal noise levels. In particular, $n_{p',FF'} = 1,2 $, $(n_\mathrm{mp}, n_\mathrm{fl}) = (16, 4), (64, 4), (8, 16)$, $\epsilon = 0, 0.02, 0.04, 0.06$, $n_{P,Q} = 4, 5, 6$. The same cases as above (time slices of shots 4275 and 6962) are used as target equilibria. For shot 6962, equilibria with TS pressure profiles and with linear $p'$ and $FF'$. This means there is 15 different target equilibria in total.
+In order to get a global overview of EFIT++ and VacTH reconstruction properties on COMPASS, we perform a scan over major code parameters and signal noise levels. In particular, $n_{p',FF'} = 1,2 $, $(n_\mathrm{mp}, n_\mathrm{fl}) = (16, 4), (64, 4), (8, 16)$, $\epsilon = 0, 0.02, 0.04, 0.06$, $n_{P,Q} = 4, 5, 6$. The same cases as above (time slices of shots 4275 and 6962) are used as target equilibria. For shot 6962, equilibria with TS pressure profiles and with linear $p'$ and $FF'$ are used. This means there is 15 different target equilibria in total.
 
-Absolute errors of the reconstructed LCFS extents for convergent cases from the scan are shown in Fig. \ref{fig:RZstats}. We can observer that the LCFS reconstructed with EFIT++ for target linear $p'$ and $FF'$ profiles (selection 1) are within 1~cm errors. There are, however, cases with up to 3 cm errors in $Z_{\rm{min}}$ for the more realistic TS pressure profiles (selection 2) if $n_{p'}=1$ is used. This error can be reduced by using $n_{p'}=2$. Input errors do not pose major difficulties for EFIT++. 
+Absolute errors of the reconstructed LCFS extents for convergent cases from the scan are shown in Fig. \ref{fig:RZstats}. We can observe that the LCFS reconstructed with EFIT++ for target linear $p'$ and $FF'$ profiles (selection 1) are within 1~cm errors. There are, however, cases with up to 3 cm errors in $Z_{\rm{min}}$ for the more realistic TS pressure profiles (selection 2) if $n_{p'}=1$ is used. This error can be reduced by using $n_{p'}=2$. Input errors do not pose major difficulties for EFIT++. 
 
 VacTH is performing reasonably well for its most favourable diagnostic set of 8 magnetic probes and 16 flux loops and $n_P = n_Q = 4$. With a higher number of harmonics or with less flux loops, VacTH becomes unreliable and yields significant errors. Unfortunately, only 4 flux loops are currently available on COMPASS. In fact, it is easier for VacTH to fit magnetic probes than flux loops
 An additional optimization of the fitting weights or algorithm is probably needed. The current behaviour might be quite anti-intuitive as VacTH performs significantly worse with 16 flux loops and 16 or 64 magnetic probes in comparison to 16 flux loops and only 8 magnetic probes. 
 
 EFIT++ internal plasma parameters reconstruction results are shown in Fig. \ref{fig:kinetic_stats}. It shows that purely magnetic reconstruction with $n_{p'}=n_{FF'}=1$ introduces (except for $I_{\rm{p}}$) a systematic error for realistic pressure profiles, i.e. for plasmas that do not have the same profile parametrization. 
 It is known that magnetic reconstruction with EFIT is difficult for small circular plasmas (without additional constraints, particularly the stored energy) \cite{efit1985}.
-This suggests that using $n_{p'}=1$ for circular plasmas and $n_{p'}=2$ for elongated and diverted plasmas might lead to better results. This is demonstrated in the bottom row of Fig. \ref{fig:kinetic_stats}.
+This suggests that using $n_{p'}=1$ for circular plasmas and $n_{p'}=2$ for elliptical and diverted plasmas might lead to better results. This is demonstrated in the bottom row of Fig. \ref{fig:kinetic_stats}.
 Reconstructions with such optimized parameters do not suffer from the systematic error; however, they generally increase the error bars for target equilibria with linear $p'$ and $FF'$, especially for $q_0$. It is also notable that $\delta l_{\rm{i}} \cong 0.1$ for all $n_{p'}=n_{FF'}=1$ reconstructions.
 
 \begin{figure}

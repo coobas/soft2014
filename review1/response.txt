@@ -1,0 +1,62 @@
+Dear editors, dear referee,
+
+thank you for your valuable comments concerning our manuscript. We have addressed all of them and corrected the text accordingly. Please find detailed answers below.
+
+Best regards,
+Jakub Urban
+
+
+> Reviewer #2: The manuscript is well organized and written in general. I found some misprints and other small inconsistencies to check for the final version. I have also some comments.
+> Misprints.
+> 1. Introduction. 
+> now: … which predicts PF coils currents from a give plasma boundary and profiles.
+> to be: … which predicts PF coils currents from a given plasma boundary and profiles.
+> 3.2 Statistical analysis
+> now: For shot 6962, equilibria with TS pressure profiles and with linear p' and FF'.
+> to be: For shot 6962, equilibria with TS pressure profiles and with linear p' and FF' is used.
+> 3.2 Statistical analysis
+> now: We can observer that the…
+> to be: We can observe that the…
+
+All the misprints have been corrected.
+
+> Inconsistencies.
+> 
+> 2. Verification and validation procedure.
+> When defining verification and validation procedure you specify 4 steps. Then you expain them, but in explanation you change order:
+> Procedure definition:
+> 4. Reconstruct FREEBIE equilibria using EFIT++ and VacTH with various parameters and artificial input noise.
+> Later in text:
+> In the optional third step, an artificial random noise is added to the calculated values of Ip, magnetic probes and flux loops.
+
+We have changed the text of chapter 2:
+" ...
+FREEBIE inputs can be modified in the optional third step. In the following analysis, we particularly use realistic pressure profiles, estimated by Thomson scattering diagnostics.
+
+The final fourth step consists of reconstructing the equilibria form synthetic FREEBIE data using EFIT++ and VacTH. An artificial random noise is added to the calculated values of $I_\mathrm{p}$, magnetic probes and flux loops. In particular, for a given noise level $\epsilon$, $\tilde X = \left( {1 + U\left( { - \epsilon, \epsilon} \right)^\mathrm{T}} \right)X$, where $X$ is a row vector of the synthetic diagnostics data and $U\left( { - \epsilon, \epsilon} \right)$ is a random vector of the same shape as $X$ with a uniform distribution on $\left( { - \epsilon, \epsilon} \right)$. The reconstructions are then compared to the original equilibrium, focusing on global parameters and geometry. Scans are performed over noise levels ($\epsilon$) and selected code parameters: $p'$ and $FF'$ polynomial degrees in EFIT++ ($n_{p'}$, $n_{FF'}$) and the number of harmonics ($n_P$, $n_Q$) in VacTH. The following quantities are used for the comparison.
+... "
+
+> 3. Results.
+> You introduce different shapes as circular elongated and diverted. Then in 3.1 you are using term 'eliptical' several times, that can refer to both elongated and diverted plasmas. Could you specify which plasmas you refer to in each case.
+
+We now use 'elliptical' throughout the paper when referring to elongated, limited plasmas. In the beginning of chapter 3, we now explicitly say: "These cases include circular, elliptical (limited) and diverted plasmas with different currents." We believe that this avoids any confusion since diverted plasmas are always designated explicitly.
+ 
+> Comments.
+> 
+> 1. When talking about ITM CPOs, I think you need reference to explain what is it. It could be for example:
+> G. Manduchi et al, Fusion Eng. Design 83 (2008) 462
+
+The reference has been added.
+
+> 2. Annotation to Fig.2. Last sentence is not clear for me, what do you mean? Have you artificially scattered zero error data? Could you explain this?
+
+We simply scattered the x position of the data points with zero input error in order to suppress their overlap. We have removed this sentence from the caption as it should be clear enough that the error of these data points is zero. Based on your comment, the sentence was a bit confusing.
+ 
+> 3. Fig.2. I propose to change color for case s3 from purple to (for example) green to distinguish results (it is hard to do now).
+
+The colour has been changed.
+
+> 4. Conclusions. When you are saying that VacTH is a promising tool for a real-feedback control, on what reasoning are you relying? In the text it is shown that VacTH is able to reconstruct plasma surface with 'reasonable' accuracy. I think in order to conclude about it's applicability for real-time control it should be verified against another real-time tools. My conclusion from the results shown is that further improvements in the code are needed to make it more robust (that is required for real-time feedback control).
+
+The conclusion we draw in the paper is that VacTH is promising for real-time shape control. In out opinion, the accuracy of VacTH shape reconstruction shall be reasonable for real time plasma position/shape control. However, we agree that the robustness (and the accuracy as well) should be improved. There are actually new results for VacTH parameters optimizations. We do not think that VacTH must necessarily be compared to other real-time shape reconstruction tools providing that it shows enough accuracy, robustness and speed required by a particular feed-back algorithm. Since such an algorithm does not exist yet on COMPASS, we do not have absolute measures.
+We have extended the last sentence of the conclusions: "We conclude that VacTH is a promising tool pertinent for a real-time feedback control of the plasma shape, although its robustness and accuracy should be improved."
