@@ -54,9 +54,16 @@ We simply scattered the x position of the data points with zero input error in o
  
 > 3. Fig.2. I propose to change color for case s3 from purple to (for example) green to distinguish results (it is hard to do now).
 
-The colour has been changed.
+The colour has been changed to green.
 
 > 4. Conclusions. When you are saying that VacTH is a promising tool for a real-feedback control, on what reasoning are you relying? In the text it is shown that VacTH is able to reconstruct plasma surface with 'reasonable' accuracy. I think in order to conclude about it's applicability for real-time control it should be verified against another real-time tools. My conclusion from the results shown is that further improvements in the code are needed to make it more robust (that is required for real-time feedback control).
 
-The conclusion we draw in the paper is that VacTH is promising for real-time shape control. In out opinion, the accuracy of VacTH shape reconstruction shall be reasonable for real time plasma position/shape control. However, we agree that the robustness (and the accuracy as well) should be improved. There are actually new results for VacTH parameters optimizations. We do not think that VacTH must necessarily be compared to other real-time shape reconstruction tools providing that it shows enough accuracy, robustness and speed required by a particular feed-back algorithm. Since such an algorithm does not exist yet on COMPASS, we do not have absolute measures.
+The conclusion we draw in the paper is that VacTH is promising for real-time shape control. In our opinion, the accuracy of VacTH shape reconstruction shall be reasonable for real time plasma position/shape control. However, we agree that the robustness (and the accuracy as well) should be improved. There are actually new results for VacTH parameters optimizations. We do not think that VacTH must necessarily be compared to other real-time shape reconstruction tools providing that it shows enough accuracy, robustness and speed required by a particular feed-back algorithm. Since such an algorithm does not exist yet on COMPASS, we do not have absolute measures.
 We have extended the last sentence of the conclusions: "We conclude that VacTH is a promising tool pertinent for a real-time feedback control of the plasma shape, although its robustness and accuracy should be improved."
+
+
+Additional amendments to the manuscript:
+1. VacTH reference updated in abstract to "[B. Faugeras et al., PPCF 2014, 114010]".
+2. Figures in the Results chapter have been scaled down to 97 % in order to fit the longer reference list.
+3. A grammatical error has been corrected: "For shot 6962, equilibria with TS pressure profiles and with linear $p'$ and $FF'$ are used." ("are used" was missing in the original text.)
+4. Paragraphs are no longer used in Conclusions in order to save space.
