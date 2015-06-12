@@ -1,9 +1,9 @@
 Dear editors, dear referee,
 
-thank you for your valuable comments concerning our manuscript. We have addressed all of them and corrected the text accordingly. Please find detailed answers below.
+thank you for your valuable comments concerning our manuscript. We have addressed all of them and amended the text accordingly. Please find detailed answers below.
 
 Best regards,
-Jakub Urban
+Jakub Urban et al.
 
 
 > Reviewer #2: The manuscript is well organized and written in general. I found some misprints and other small inconsistencies to check for the final version. I have also some comments.
@@ -59,7 +59,7 @@ The colour has been changed to green.
 > 4. Conclusions. When you are saying that VacTH is a promising tool for a real-feedback control, on what reasoning are you relying? In the text it is shown that VacTH is able to reconstruct plasma surface with 'reasonable' accuracy. I think in order to conclude about it's applicability for real-time control it should be verified against another real-time tools. My conclusion from the results shown is that further improvements in the code are needed to make it more robust (that is required for real-time feedback control).
 
 The conclusion we draw in the paper is that VacTH is promising for real-time shape control. In our opinion, the accuracy of VacTH shape reconstruction shall be reasonable for real time plasma position/shape control. However, we agree that the robustness (and the accuracy as well) should be improved. There are actually new results for VacTH parameters optimizations. We do not think that VacTH must necessarily be compared to other real-time shape reconstruction tools providing that it shows enough accuracy, robustness and speed required by a particular feed-back algorithm. Since such an algorithm does not exist yet on COMPASS, we do not have absolute measures.
-We have extended the last sentence of the conclusions: "We conclude that VacTH is a promising tool pertinent for a real-time feedback control of the plasma shape, although its robustness and accuracy should be improved."
+We have extended the last sentence of the conclusions: "We conclude that VacTH is a promising tool pertinent for a real-time feedback control of the plasma shape.We conclude that VacTH is a promising tool pertinent for a real-time feedback control of the plasma shape. We will further improve its robustness and accuracy and test the code within a suitable feedback algorithm."
 
 
 Additional amendments to the manuscript:
